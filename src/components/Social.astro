@@ -1,0 +1,13 @@
+---
+const { platform, username } = Astro.props;
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
