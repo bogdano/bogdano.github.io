@@ -3,6 +3,6 @@ const currentPath = new URL(Astro.request.url).pathname.slice(1);
 ---
 <div class="nav-links">
   <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-  <a class={currentPath === "about" ? "active" : ""} href="/about">About</a>
-  <a class={currentPath === "projects" ? "active" : ""} href="/projects">Projects</a>
+  <a class={currentPath === "about/" ? "active" : ""} href="/about">About</a>
+  <a class={currentPath === "projects/" ? "active" : ""} href="/projects">Projects</a>
 </div>
