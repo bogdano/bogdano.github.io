@@ -38,7 +38,9 @@
   --switch-checked-background-color: var(--primary);
 }
 
-
+main {
+  padding: calc(var(--block-spacing-vertical)*0.6) 0 !important;
+}
 header {
   padding-bottom:0 !important;
 }
@@ -61,6 +63,7 @@ body {
 }
 
 h1 {
+  margin-left: -0.35rem;
   font-size: 3.5rem;
   font-family: 'Bungee Shade', sans-serif;
   font-weight: unset;
