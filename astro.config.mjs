@@ -6,7 +6,4 @@ export default defineConfig({
 	// Enable React to support React JSX components.
 	integrations: [react()],
 	site: 'https://bogz.dev',
-	experimental: {
-		viewTransitions: true,
-	}
 });
