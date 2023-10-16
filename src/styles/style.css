@@ -1,45 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Kanit:wght@700&family=Lato:wght@400&display=swap');
 
-/* Yellow Light scheme (Default) */
+/* Amber color for light color scheme (Default) */
 /* Can be forced with data-theme="light" */
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  --primary: #fdd835;
-  --primary-hover: #fbc02d;
-  --primary-focus: rgba(253, 216, 53, 0.125);
-  --primary-inverse: rgba(0, 0, 0, 0.75);
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-text-selection-color: rgba(183, 136, 0, 0.25);
+  --pico-primary: #876400;
+  --pico-primary-background: #ffbf00;
+  --pico-primary-underline: rgba(135, 100, 0, 0.5);
+  --pico-primary-hover: #694d00;
+  --pico-primary-hover-background: #e8ae01;
+  --pico-primary-focus: rgba(183, 136, 0, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-secondary-hover);
 }
 
-/* Yellow Dark scheme (Auto) */
+/* Amber color for dark color scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --primary: #fdd835;
-    --primary-hover: #ffeb3b;
-    --primary-focus: rgba(253, 216, 53, 0.25);
-    --primary-inverse: rgba(0, 0, 0, 0.75);
+    --pico-text-selection-color: rgba(199, 148, 0, 0.1875);
+    --pico-primary: #c79400;
+    --pico-primary-background: #ffbf00;
+    --pico-primary-underline: rgba(199, 148, 0, 0.5);
+    --pico-primary-hover: #e8ae01;
+    --pico-primary-hover-background: #fecc63;
+    --pico-primary-focus: rgba(199, 148, 0, 0.25);
+    --pico-primary-inverse: #000;
+    --pico-switch-color: var(--pico-background-color);
   }
 }
 
-/* Yellow Dark scheme (Forced) */
+/* Amber color for dark color scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
-[data-theme="dark"] {
-  --primary: #fdd835;
-  --primary-hover: #ffeb3b;
-  --primary-focus: rgba(253, 216, 53, 0.25);
-  --primary-inverse: rgba(0, 0, 0, 0.75);
+[data-theme=dark] {
+  --pico-text-selection-color: rgba(199, 148, 0, 0.1875);
+  --pico-primary: #c79400;
+  --pico-primary-background: #ffbf00;
+  --pico-primary-underline: rgba(199, 148, 0, 0.5);
+  --pico-primary-hover: #e8ae01;
+  --pico-primary-hover-background: #fecc63;
+  --pico-primary-focus: rgba(199, 148, 0, 0.25);
+  --pico-primary-inverse: #000;
+  --pico-switch-color: var(--pico-background-color);
 }
 
-/* Yellow (Common styles) */
-:root {
-  --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: var(--primary-focus);
-  --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
-}
 
 main {
-  padding: calc(var(--block-spacing-vertical)*0.6) 0 !important;
+  padding: calc(var(--pico-block-spacing-vertical)*0.6) 0 !important;
 }
 header {
   padding-bottom:0 !important;
@@ -88,7 +96,7 @@ nav :where(a, [role=link]) {
   width: 40px;
   height: 4px;
   margin-bottom: 8px;
-  background-color: var(--primary);
+  background-color: var(--pico-primary);
   border-radius: 4px;
 }
 
@@ -100,10 +108,10 @@ nav :where(a, [role=link]) {
 }
 
 .nav-links a.active {
-  background-color: rgb(236, 172, 55);
+  background-color: var(--pico-primary-background);
   color: black;
 } .nav-links a.active:hover {
-  background-color: rgb(236, 172, 55);
+  background-color: var(--pico-primary-background);
 }
 
 .nav-links a {
@@ -118,8 +126,8 @@ nav :where(a, [role=link]) {
   font-family: 'Kanit', sans-serif;
   color:var(--h5-color)
 } .nav-links a:hover, .nav-links a:focus {
-  background-color: var(--primary-hover);
-  color: var(--primary-inverse);
+  background-color: var(--pico-primary-hover-background);
+  color: var(--pico-primary-inverse);
 }
 
 .expanded {
