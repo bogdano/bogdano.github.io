@@ -11,3 +11,7 @@
 .counter-message {
 	text-align: center;
 }
+
+.counter > button {
+	width: 65px;
+}
