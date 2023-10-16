@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Counter.css';
 
 export default function Counter({
@@ -8,9 +8,16 @@ export default function Counter({
 	children: JSX.Element;
 	count: number;
 }) {
-	const [count, setCount] = useState(initialCount);
+	const [count, setCount] = useState(() => {
+		const storedCount = localStorage.getItem('count');
+		return storedCount ? parseInt(storedCount) : initialCount;
+	});
 	const add = () => setCount((i) => i + 1);
 	const subtract = () => setCount((i) => i - 1);
+
+	useEffect(() => {
+		localStorage.setItem('count', count.toString());
+	}, [count]);
 
 	return (
 		<>
