@@ -10,8 +10,11 @@ export default function Counter({
 }) {
 	const isBrowser = typeof window !== 'undefined';
 	const [count, setCount] = useState(() => {
-		const storedCount = localStorage.getItem('count');
-		return storedCount ? parseInt(storedCount) : initialCount;
+		if (isBrowser) {
+			const storedCount = localStorage.getItem('count');
+			return storedCount ? parseInt(storedCount) : initialCount;
+		}
+		
 	});
 	const add = () => setCount((i) => i + 1);
 	const subtract = () => setCount((i) => i - 1);
