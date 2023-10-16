@@ -8,6 +8,7 @@ export default function Counter({
 	children: JSX.Element;
 	count: number;
 }) {
+	const isBrowser = typeof window !== 'undefined';
 	const [count, setCount] = useState(() => {
 		const storedCount = localStorage.getItem('count');
 		return storedCount ? parseInt(storedCount) : initialCount;
