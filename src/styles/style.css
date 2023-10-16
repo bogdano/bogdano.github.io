@@ -117,7 +117,7 @@ nav :where(a, [role=link]) {
 .nav-links a {
   display: block;
   border-radius: 3px;
-  margin: 1.5px;
+  margin: 0.5px;
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
