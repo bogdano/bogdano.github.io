@@ -2,8 +2,10 @@
 	display: grid;
 	font-size: 3em;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	margin-top: 2em;
 	place-items: center;	
+	margin: auto;
+	margin-top: 2em;
+	max-width: 350px;
 }
 
 .counter-message {
