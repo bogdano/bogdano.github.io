@@ -15,3 +15,7 @@
 .counter > button {
 	width: 65px;
 }
+
+.counter > pre {
+	margin-top: 15px;
+}
