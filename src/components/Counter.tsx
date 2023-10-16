@@ -16,7 +16,9 @@ export default function Counter({
 	const subtract = () => setCount((i) => i - 1);
 
 	useEffect(() => {
-		localStorage.setItem('count', count.toString());
+		if (isBrowser) {
+			localStorage.setItem('count', count.toString());
+		}
 	}, [count]);
 
 	return (
