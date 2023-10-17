@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 const pageTitle = Astro.props.pageTitle;
+const pageDate = Astro.props.pageDate;
 // Component Imports
 
 // Full Astro Component Syntax:
@@ -24,10 +25,10 @@ const pageTitle = Astro.props.pageTitle;
 	
 	<body>
     <Header />
-    <main transition:animate="morph">
+    <main transition:animate="initial">
       <div class="h1-wrapper">
 				<h1>{pageTitle}</h1>
-				<h5>DATE</h5>
+				<h5>{pageDate}</h5>
 			</div>
       <slot />
     </main>

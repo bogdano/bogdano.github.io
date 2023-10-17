@@ -8,22 +8,16 @@ export default function Counter({
 	children: JSX.Element;
 	count: number;
 }) {
-
-	// make sure the code is running in a browser before trying to use localStorage
-	const isBrowser = typeof window !== 'undefined';
-	const [count, setCount] = useState(() => {
-		if (isBrowser) {
-			const storedCount = localStorage.getItem('count');
-			return storedCount ? parseInt(storedCount) : initialCount;
-		}		
-	});
+	const [count, setCount] = useState(initialCount);
 	const add = () => setCount((i) => i + 1);
 	const subtract = () => setCount((i) => i - 1);
 
 	useEffect(() => {
-		if (isBrowser) {
-			localStorage.setItem('count', count.toString());
-		}
+		const savedCount = localStorage.getItem('count');
+		setCount(Number(savedCount) || initialCount);
+	}, []);
+	useEffect(() => {
+		localStorage.setItem('count', count.toString());
 	}, [count]);
 
 	return (

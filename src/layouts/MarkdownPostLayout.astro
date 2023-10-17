@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+const pubDate = new Date(frontmatter.pubDate);
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} pageDate={pubDate.toLocaleDateString('en-UK', {year: 'numeric', month: 'long'})}>
   <p style="font-weight: bold; margin-top: 0.5rem !important;">{frontmatter.author}</p> 
   <slot />
 </BaseLayout>
