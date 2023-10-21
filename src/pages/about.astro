@@ -8,17 +8,14 @@ const identity = {
   hobbies: ["photography", "birdwatching", "baseball"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["astro", "react", "github-pages"];
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 <BaseLayout pageTitle={title}>
   <h2>... and my new Astro site!</h2>
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-  
-  <p>My skills are:</p>
+  <p>This is placeholder text, I'll be updating this site throughout the semester.</p>
+  <p>The site is built with (so far):</p>
   <ul>
     {skills.map((skill) => <li>{skill}</li>)}
   </ul>
