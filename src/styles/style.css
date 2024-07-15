@@ -85,25 +85,10 @@ nav :where(a, [role=link]) {
   margin: unset;
   border-radius: unset;
 }
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 4px;
-  margin-bottom: 8px;
-  background-color: var(--pico-primary);
-  border-radius: 4px;
-}
 
 .nav-links {
   width: 100%;
   top: 5rem;
-  display: none;
   margin: 0;
 }
 
@@ -115,11 +100,11 @@ nav :where(a, [role=link]) {
 }
 
 .nav-links a {
-  display: block;
+  display: inline-block;
   border-radius: 3px;
   margin: 1.5px;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 20px;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -128,29 +113,6 @@ nav :where(a, [role=link]) {
 } .nav-links a:hover, .nav-links a:focus {
   background-color: var(--pico-primary-hover-background);
   color: var(--pico-primary-inverse);
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
 }
 
 .h1-wrapper > h5, .h1-wrapper > h1{
