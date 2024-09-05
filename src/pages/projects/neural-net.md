@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 
 title: 'Neural Net'
 subtitle: 'A neural network implementation in Python & Mojo.'
-logo: '/neural_net-logo.png'
+logo: '/neural_net-logo.webp'
 description: "An exploration of my learning experience of coding a neural network from scratch. I chose Python for this implementation because of my desire to port and compare it to the Mojo programming language, which aims to be, syntactically, a superset of Python."
 projectURL: ''
 githubLink: 'https://github.com/bogdano/neural-net'

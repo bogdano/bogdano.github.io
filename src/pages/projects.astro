@@ -7,10 +7,10 @@ const allProjects = await Astro.glob("./projects/*.md");
 allProjects.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
 ---
 <BaseLayout pageTitle={title}>
-    <p class="mb-8 text-center md:text-left">Some of the projects that I have recently worked on:</p>
+    <p class="mb-8 text-center md:text-left">Some of the personal/open source projects that I have recently worked on:</p>
     <div class="flex flex-col lg:flex-row lg:flex-wrap gap-4 mb-8">
         {allProjects.map((project) => (
-            <ProjectCard url={project.url} title={project.frontmatter.title} logo={project.frontmatter.logo} subtitle={project.frontmatter.subtitle} />
+            <ProjectCard url={project.url} title={project.frontmatter.title} logo={project.frontmatter.logo} subtitle={project.frontmatter.subtitle} inProgress={project.frontmatter.inProgress} />
         ))}
     </div>
 </BaseLayout>

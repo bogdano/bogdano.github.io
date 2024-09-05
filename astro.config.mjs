@@ -7,7 +7,9 @@ export default defineConfig({
   // Enable React to support React JSX components.
   // integrations: [react()],
   site: 'https://bogz.dev',
-  integrations: [tailwind()],
+  integrations: [
+    tailwind()
+  ],
   markdown: {
       shikiConfig: {
         // Choose from Shiki's built-in themes (or add your own)
