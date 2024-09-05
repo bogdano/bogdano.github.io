@@ -3,8 +3,35 @@ import Social from "./Social.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<footer class="py-16 flex flex-row gap-4">
-    <ThemeToggle />
-    <Social platform="github" username="bogdano" />
-    <Social platform="linkedin" username="in/bogdan-boskovic" />
+<footer class="py-16 flex flex-row justify-between items-center">
+    <div class="flex flex-row gap-4">
+        <ThemeToggle />
+        <Social platform="github" username="bogdano" />
+        <Social platform="linkedin" username="in/bogdan-boskovic" />
+    </div>
+    <button id="up-button" class="border border-bunker-200 dark:border-bunker-800 group rounded-custom hover:bg-bunker-50 dark:hover:bg-bunker-900">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-bunker-300 group-hover:fill-amber-500 fill-bunker-300">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.2652 7 12.5196 7.10536 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.4804 7.10536 11.7348 7 12 7Z"/>
+        </svg>
+    </button>
 </footer>
+
+<script is:inline data-astro-rerun>
+    // do not show the up button if at beginning of page, show otherwise
+    if (typeof upButton === "undefined") {
+        const upButton = document.getElementById('up-button');
+        function updateButtonVisibility() {
+            if (window.scrollY > 0) {
+                upButton.style.display = 'block';
+            } else {
+                upButton.style.display = 'none';
+            }
+        }
+        document.addEventListener('astro:page-load', updateButtonVisibility);
+        document.addEventListener('scroll', updateButtonVisibility);
+        // scroll to top
+        upButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>

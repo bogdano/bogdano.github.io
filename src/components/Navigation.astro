@@ -1,7 +1,7 @@
 ---
 const currentPath = new URL(Astro.request.url).pathname
 ---
-<nav class="flex flex-row gap-1 mb-8">
+<nav class="flex flex-row gap-1 mb-8 ">
   <a class={`h-16 flex items-center px-7 text-xl border-2 hover:border-amber-400 font-bold font-kanit rounded-custom transition-colors ${currentPath === '/' ?               'bg-amber-400 text-bunker-950 border-amber-400' : 'text-bunker-600 dark:text-bunker-300 border-transparent hover:text-bunker-950 dark:hover:text-white'}`} href="/">ABOUT</a>
   <a class={`h-16 flex items-center px-7 text-xl border-2 hover:border-amber-400 font-bold font-kanit rounded-custom transition-colors ${currentPath.includes('/projects') ? 'bg-amber-400 text-bunker-950 border-amber-400' : 'text-bunker-600 dark:text-bunker-300 border-transparent hover:text-bunker-950 dark:hover:text-white'}`} href="/projects">PROJECTS</a>
   <a href="mailto:bogdan.boskovic@pm.me">
