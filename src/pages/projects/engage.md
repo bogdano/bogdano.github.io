@@ -10,8 +10,7 @@ githubLink: 'https://github.com/bogdano/atg-engage'
 order: 2
 ---
 
-**Please feel free to create an account and explore the app. If you would like to see what the app looks like to moderators, please send me an email
-using the button above, and I will elevate your privileges.**<br /><br />
+**Please feel free to create an account and explore the app. If you would like to see what the app looks like to moderators, you can contact me and I will elevate your account's privileges.**<br /><br />
 
 In the Covid and post-Covid years, more and more employees opted to work from home most of the time, and one result of that was the loss
 of a feeling of cohesion within the branch. Our app was intended to ameliorate this loss by providing a platform for employees to engage
@@ -31,5 +30,5 @@ constrained by time. As a result of this, I took a leap and decided that we shou
 For styling, I chose **Tailwind** CSS, for two reasons: one, our approach would have us all take on the role of full-stack developers as opposed to separating
 front and backend work, and two, Tailwind is granular and versatile enough to not require the use of a component library, with a small team.<br /><br />
 
-Surprisingly, this approach worked quite well. In the first week of development, I asked the team to create todo MVC apps in order to familiarize themselves with HTMX.
+Thankfully, this approach worked quite well. In the first week of development, I asked the team to create todo MVC apps in order to familiarize themselves with HTMX.
 With this minimal amount of experience, we were able to complete a fully-functional minimum viable product within the given timeframe.
