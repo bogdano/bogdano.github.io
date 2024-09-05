@@ -1,16 +1,10 @@
 ---
-import Social from './Social.astro';
+import Social from "./Social.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer style="position:absolute; bottom: 0;">
-  <Social platform="linkedin" username="in/bogdan-boskovic" />
-  <Social platform="github" username="bogdano" />
+<footer class="py-16 flex flex-row gap-4">
+    <ThemeToggle />
+    <Social platform="github" username="bogdano" />
+    <Social platform="linkedin" username="in/bogdan-boskovic" />
 </footer>

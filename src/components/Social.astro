@@ -2,12 +2,4 @@
 const { platform, username } = Astro.props;
 ---
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<a href={`https://www.${platform}.com/${username}`} style="color:var(--h6-color)">{platform}</a>
+<a href={`https://www.${platform}.com/${username}`} class="border-b border-amber-400 dark:border-amber-300 text-bunker-600 dark:text-bunker-300 text-xl hover:text-bunker-950 dark:hover:text-white hover:border-amber-500 dark:hover:border-amber-600 font-bold"> {platform}</a>

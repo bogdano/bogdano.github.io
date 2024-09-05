@@ -1,9 +1,26 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-const pubDate = new Date(frontmatter.pubDate);
 ---
-<BaseLayout pageTitle={frontmatter.title} pageDate={pubDate.toLocaleDateString('en-UK', {year: 'numeric', month: 'long'})}>
-  <p style="font-weight: bold; margin-top: 0.5rem !important;">{frontmatter.author}</p> 
-  <slot />
+<BaseLayout pageTitle={frontmatter.title} subtitle={frontmatter.subtitle}>
+    <div class="flex flex-col md:flex-row gap-4 md:gap-8 items-center mt-4 mb-8">
+        {frontmatter.projectURL ? (
+          <a href={frontmatter.projectURL} target="_blank" class="block relative min-w-36 group">
+              <img class="w-36 h-36" src={frontmatter.logo} alt={frontmatter.title + " logo"} />
+              <div class="absolute bottom-2 right-2 p-1 rounded-full bg-bunker-700 dark:bg-bunker-100 group-hover:bg-bunker-900 group-hover:dark:bg-bunker-200">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 stroke-white dark:stroke-black">
+                      <path d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </div>
+          </a>
+        ) : (
+        <img class="w-36 h-36" src={frontmatter.logo} alt={frontmatter.title + " logo"} />
+        )}
+        <p>{frontmatter.description}
+            <a href={frontmatter.githubLink} target="_blank" class="font-bold text-base text-bunker-500 underline hover:dark:text-bunker-300 hover:text-bunker-700">GitHub</a>
+        </p>
+    </div>
+    <div class="text-xl">
+        <slot />
+    </div>
 </BaseLayout>
