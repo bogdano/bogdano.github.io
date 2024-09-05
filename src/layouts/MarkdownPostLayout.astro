@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props;
         ) : (
         <img class="w-36 h-36" src={frontmatter.logo} alt={frontmatter.title + " logo"} />
         )}
-        <p>{frontmatter.description}
+        <p class="text-center md:text-left">{frontmatter.description}
             <a href={frontmatter.githubLink} target="_blank" class="font-bold text-base text-bunker-500 underline hover:dark:text-bunker-300 hover:text-bunker-700">GitHub</a>
         </p>
     </div>

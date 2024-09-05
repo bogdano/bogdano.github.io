@@ -23,17 +23,17 @@ const subtitle = Astro.props.subtitle;
     </head>
 
     <body
-        class="container mx-auto lg:px-28 lg:py-20 h-dvh relative bg-white text-bunker-900 dark:text-bunker-100 dark:bg-bunker-950 selection:bg-amber-500"
+        class="container mx-auto lg:px-28 lg:py-20 md:py-12 py-8 px-4 h-dvh relative bg-white text-bunker-900 dark:text-bunker-100 dark:bg-bunker-950 selection:bg-amber-500"
     >
         <Navigation />
         <main transition:animate="initial">
             <div class="font-limelight leading-tight mb-4">
-                <h1 class="text-7xl" transition:animate="none">
+                <h1 class="text-5xl md:text-7xl text-center md:text-left" transition:animate="none">
                     {pageTitle}
                 </h1>
                 {
                     subtitle && (
-                        <h5 class="text-4xl mt-4 ml-1 text-bunker-600 dark:text-bunker-300">
+                        <h5 class="text-3xl md:text-4xl text-center md:text-left mt-4 ml-1 text-bunker-600 dark:text-bunker-300">
                             {subtitle}
                         </h5>
                     )
