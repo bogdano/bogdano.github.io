@@ -4,6 +4,11 @@
     border-radius: 0.25rem;
 }
 
+code {
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+}
+
 html.dark .astro-code,
 html.dark .astro-code span {
   color: var(--shiki-dark) !important;
@@ -12,4 +17,11 @@ html.dark .astro-code span {
   font-style: var(--shiki-dark-font-style) !important;
   font-weight: var(--shiki-dark-font-weight) !important;
   text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+@media (max-width: 768px) {
+    code {
+        font-size: 0.9rem;
+        line-height: 0.5rem;
+    }
 }
