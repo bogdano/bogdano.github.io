@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
         )}
         <p class="text-center md:text-left">{frontmatter.description}
             {frontmatter.inProgress && (
-                <span class="bg-bunker-100 dark:bg-bunker-900 text-bunker-400 text-sm font-bold px-2 py-1 rounded">in development</span>
+                <span class="whitespace-nowrap bg-bunker-100 dark:bg-bunker-900 text-bunker-400 text-sm font-bold px-2 py-1 rounded">in development</span>
             )}
             <a href={frontmatter.githubLink} target="_blank" class="font-bold text-base text-bunker-500 underline hover:dark:text-bunker-300 hover:text-bunker-700">GitHub</a>
         </p>

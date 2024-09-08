@@ -4,15 +4,17 @@ const { url, title, subtitle, logo, inProgress } = Astro.props;
 
 <a href={url} class="flex relative text-base p-4 rounded-2xl border border-bunker-300 dark:border-bunker-500 hover:bg-bunker-100 dark:hover:bg-bunker-900 lg:w-96 lg:min-h-36 items-center">
     <div class="flex items-center">
-        <img src={logo} alt={title} class="w-20 h-20 mr-4" />
+        <div class="min-w-20 min-h-20 rounded-full bg-bunker-200 dark:bg-bunker-900 mr-4">
+            <img src={logo} alt={title} class="w-20 h-20" loading="lazy" />
+        </div>
         <div>
           <p class="text-xl font-bold">{title}</p>
           <p>{subtitle}</p>
         </div>
     </div>
-    {inProgress ? (
-        <div class="absolute bottom-0 right-0 bg-bunker-100 dark:bg-bunker-900 text-bunker-400  text-sm font-bold px-2 py-1 rounded-br-2xl rounded-tl">
+    {inProgress && (
+        <div class="absolute bottom-0 right-0 bg-bunker-100 dark:bg-bunker-900 text-bunker-400  text-xs font-bold px-2 py-1 rounded-br-2xl rounded-tl">
             in development
         </div>
-    ) : null}
+    )}
 </a>

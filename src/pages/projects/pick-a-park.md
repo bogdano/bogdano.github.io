@@ -23,3 +23,6 @@ smooth a user experience as possible. One part of this minimalist approach was t
 much can be done with the minimalist hypermedia-driven approach, and my choice to use HTMX here stems from my desire to become familiar with the types of projects that do
 benefit from the decreased complexity of having a single source of application state (while not compromising on UX), and which types of projects would be better off
 sticking with the SPA approach.<br /><br />
+
+**Shoutout to the US National Parks Service:** thank you for your great work, and for being forward-thinking enough to provide an API for the parks. If every national parks
+service in the world had an API, it would be trivial to expand this app to include the **3,367** national parks worldwide.
