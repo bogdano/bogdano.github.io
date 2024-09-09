@@ -162,7 +162,10 @@ layer_sizes = [1, 50, 50, 50, 50, 50, 50, 50, 50, 50, 1]
  training_loss, validation_loss = smol.fit(x_train, y_train, x_val, y_val, get_validation_loss=True)
 ```
 
-<img src="/output.png" class="mx-auto rounded mt-2">
+<div class="flex flex-col lg:flex-row flex-wrap">
+  <img src="/output.png" class="mx-auto md:h-96 rounded mt-2">
+  <img src="/loss.png" class="mx-auto md:h-96 rounded mt-2">
+</div>
 
 <h5 class="text-4xl mt-8 ml-1 text-bunker-600 dark:text-bunker-300 font-limelight leading-tight mb-2">
   Mojo

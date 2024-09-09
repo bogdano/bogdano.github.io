@@ -14,7 +14,8 @@ order: 2
 
 In the Covid and post-Covid years, more and more employees opted to work from home most of the time, and one result of that was the loss
 of a feeling of cohesion within the branch. Our app was intended to ameliorate this loss by providing a platform for employees to engage
-and compete against each other by participating in various activities.
+and compete against each other by participating in various activities. This was essentially the problem statement that we were given, and all further
+requirements were derived from carrying out interviews and handing out questionnaires to the employees at the Missoula Cognizant branch, who would eventually be the users.<br /><br />
 
 Users are incentivized by earning points for participating in activities, which can be spent to purchase items in the shop. App administrators
 can add rewards to the app's shop. A unifying trait amongst the employees we interviewed was competitiveness, and so the ability to compete via
