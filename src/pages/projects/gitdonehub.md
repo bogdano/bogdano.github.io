@@ -13,3 +13,5 @@ githubLink: 'https://github.com/bogdano/gitdonehub'
 order: 4
 inProgress: true
 ---
+
+This project is currently on hold as I work through the Leetcode 150 problems, and the CodeCrafters series on building SQLite from scratch.
