@@ -6,7 +6,7 @@ subtitle: 'A Python PWA for encouraging inter-collegial engagement in the workpl
 logo: '/engage-logo.webp'
 description: 'As project lead of a team of 4 developers, I coordinated the gathering and documentation of requirements, outlining of project scope, database design, prototyping, and led the development of an internal web app for a Cognizant branch to completion, within 3 months.'
 projectURL: 'https://engage.bogz.dev'
-githubLink: 'https://github.com/bogdano/atg-engage'
+githubLink: 'https://github.com/bogdano/engage'
 order: 2
 ---
 
