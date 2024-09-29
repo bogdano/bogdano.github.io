@@ -3,15 +3,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Bogdan Bošković";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <p>
-        I am an experienced software engineer and US-based Computer Science graduate (currently in the Tampa Bay area). I have been a full-stack developer for over 6 years now,
-        and have had experience with a multitude of programming languages and tech stacks.
-    </p><br>
-    <p>
-        My real-world experience in software development began in 2017 with PHP, first building completely custom themes for WordPress websites, and later
-        developing custom web applications using Laravel. I have since worked on projects in Python (Django/Flask/FastAPI), Javascript (Node.js), and Golang (stdlib/Fiber/Echo), among others.
-        On the frontend, I have worked with React, Svelte, and Astro, and have recently been exploring the hypermedia approach with HTMX.
-    </p><br>
+    <div class="flex flex-col md:flex-row items-center">
+        <div class="md:mr-10 mb-6 mt-2 md:mb-0">
+            <div class="relative w-40 h-40">
+                <img src="/bogdan.webp" alt="Bogdan Bošković" class="relative rounded-full object-cover w-full h-full outline dark:outline-bunker-300 outline-amber-400 outline-offset-4">
+            </div>
+        </div>
+        <div class="order-2 md:order-1">
+            <p class="leading-relaxed">
+                I am an experienced software engineer and US-based Computer Science graduate (currently in the Tampa Bay area). I have been a full-stack developer for over 6 years now,
+                and have had experience with a multitude of programming languages and tech stacks.
+            </p>
+        </div>
+    </div>
+    <br>
+    <p class="leading-relaxed">
+      My real-world experience in software development began in 2017 with PHP, first building completely custom themes for WordPress websites, and later
+      developing custom web applications using Laravel. I have since worked on projects in Python (Django/Flask/FastAPI), JavaScript (Node.js), and Golang (stdlib/Fiber/Echo), among others.
+      On the frontend, I have worked with React, Svelte, and Astro, and have recently been exploring the hypermedia approach with HTMX.
+    </p>
     <p>
         Two years ago, I made the decision to return to college and complete the final 3 semesters of my Computer Science degree, which I have done.
         I am a quick study and a clear and efficient communicator. I have experience with leading a team of developers and delivering projects on time.
